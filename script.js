@@ -1,6 +1,6 @@
 // Replace these three values with your own business details before taking orders.
-const WHATSAPP_NUMBER = '919509526100'; // Example: 919876543210 (country code + number, no + or spaces)
-const BUSINESS_PHONE = '+91 95095 26100';
+const WHATSAPP_NUMBER = '919509426100'; // Example: 919876543210 (country code + number, no + or spaces)
+const BUSINESS_PHONE = '+91 95094 26100';
 const BUSINESS_EMAIL = 'devjangid76898@mail.com';
 
 document.addEventListener('error', event => {
