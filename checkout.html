@@ -1,1 +1,99 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout | Kota Kurtis</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><header id="site-header"></header><main class="page"><p class="eyebrow">SECURE CHECKOUT</p><h1>Almost yours.</h1><div class="checkout-grid"><form class="checkout-form" id="checkout-form"><h2>Delivery details</h2><div class="two-col"><label>Full name *<input name="customerName" required autocomplete="name"></label><label>Mobile number *<input name="phone" type="tel" required autocomplete="tel"></label></div><label>Email address *<input name="email" type="email" required autocomplete="email"></label><label>Complete address *<textarea name="address" required rows="3" autocomplete="street-address"></textarea></label><div class="three-col"><label>City *<input name="city" required autocomplete="address-level2"></label><label>State *<input name="state" required autocomplete="address-level1"></label><label>PIN code *<input name="pin" inputmode="numeric" required autocomplete="postal-code"></label></div><fieldset><legend>Payment method</legend><label class="radio"><input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label><label class="radio"><input type="radio" name="payment" value="Online Payment"> Online Payment <small>(integration ready)</small></label></fieldset><button class="button" type="submit">Place order</button></form><aside class="order-summary"><h2>Order summary</h2><div id="checkout-items"></div></aside></div><section id="order-confirmation" class="confirmation hidden"><p class="eyebrow">ORDER CONFIRMED</p><h2>Thank you for choosing Kota Kurtis.</h2><p>We’ve received your order and will be in touch shortly with your confirmation.</p><a class="button" href="index.html">Continue shopping</a></section></main><footer id="site-footer"></footer><button id="back-top" aria-label="Back to top">↑</button><div id="toast" aria-live="polite"></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout | Kota Kurtis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W8SMWG98');</script>
+<!-- End Google Tag Manager -->
+<!-- Microsoft Clarity -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','ym50042sml');</script>
+<!-- End Microsoft Clarity -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1072847062333109');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code --></head>
+<body><!-- Meta Pixel Code (noscript) -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1072847062333109&ev=PageView&noscript=1" alt=""></noscript>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8SMWG98" height="0" width="0" style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header id="site-header">
+</header>
+<main class="page">
+<p class="eyebrow">SECURE CHECKOUT</p>
+<h1>Almost yours.</h1>
+<div class="checkout-grid">
+<form class="checkout-form" id="checkout-form">
+<h2>Delivery details</h2>
+<div class="two-col">
+<label>Full name *<input name="customerName" required autocomplete="name">
+</label>
+<label>Mobile number *<input name="phone" type="tel" required autocomplete="tel">
+</label>
+</div>
+<label>Email address *<input name="email" type="email" required autocomplete="email">
+</label>
+<label>Complete address *<textarea name="address" required rows="3" autocomplete="street-address">
+</textarea>
+</label>
+<div class="three-col">
+<label>City *<input name="city" required autocomplete="address-level2">
+</label>
+<label>State *<input name="state" required autocomplete="address-level1">
+</label>
+<label>PIN code *<input name="pin" inputmode="numeric" required autocomplete="postal-code">
+</label>
+</div>
+<fieldset>
+<legend>Payment method</legend>
+<label class="radio">
+<input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label>
+<label class="radio">
+<input type="radio" name="payment" value="Online Payment"> Online Payment <small>(integration ready)</small>
+</label>
+</fieldset>
+<button class="button" type="submit">Place order</button>
+</form>
+<aside class="order-summary">
+<h2>Order summary</h2>
+<div id="checkout-items">
+</div>
+</aside>
+</div>
+<section id="order-confirmation" class="confirmation hidden">
+<p class="eyebrow">ORDER CONFIRMED</p>
+<h2>Thank you for choosing Kota Kurtis.</h2>
+<p>We’ve received your order and will be in touch shortly with your confirmation.</p>
+<a class="button" href="index.html">Continue shopping</a>
+</section>
+</main>
+<footer id="site-footer">
+</footer>
+<button id="back-top" aria-label="Back to top">↑</button>
+<div id="toast" aria-live="polite">
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>
