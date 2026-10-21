@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="seo.css">
+  <link rel="stylesheet" href="seo.css?v=auth2">
 </head>
 <body>
   <aside class="sidebar">
@@ -23,23 +23,23 @@
       <button class="nav" data-view="reports">▥ <span>Reports</span></button>
       <button class="nav" data-view="settings">⚙ <span>Settings & integrations</span></button>
     </nav>
-    <div class="side-note"><span class="dot"></span> Local development workspace</div>
+    <div class="side-note"><span class="dot"></span> Supabase protected workspace</div>
   </aside>
   <main class="main">
-    <header class="topbar"><div><span class="crumb">KOTA KURTIS <b>/</b> SEO</span><h1 id="heading">SEO overview</h1></div><div class="top-actions"><span class="local-label">SECURE SIGN IN</span><a class="store-link" href="../../index.html">View storefront ↗</a></div></header>
+  <header class="topbar"><div><span class="crumb">KOTA KURTIS <b>/</b> SEO</span><h1 id="heading">SEO overview</h1></div><div class="top-actions"><span class="local-label">SECURE SIGN IN</span><a class="store-link" href="../../index.html">View storefront ↗</a></div></header>
     <div class="notice"><b>Secure admin</b><span>Sign in with a provisioned SEO administrator account. Database access is checked by Supabase policies.</span></div>
     <section id="login-panel" class="panel auth-panel" aria-labelledby="login-title">
       <span class="eyebrow">KOTA KURTIS · PRIVATE WORKSPACE</span><h2 id="login-title" class="section-title">Administrator sign in</h2>
-      <p id="auth-message" class="sub" role="status">Loading secure sign-in…</p>
-      <form id="login-form"><label class="field">Email<input type="email" name="email" autocomplete="username" required></label><label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label><button class="button" type="submit">Sign in</button><button class="button ghost" id="logout" type="button" hidden>Sign out</button></form>
+      <p id="auth-message" class="sub" role="status">Secure sign-in needs a Supabase project. See setup steps in the repository README.</p>
+      <form id="login-form"><label class="field">Email<input type="email" name="email" autocomplete="username" required></label><label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label><button class="button" type="submit" disabled>Sign in</button><button class="button ghost" id="logout" type="button" hidden>Sign out</button></form>
     </section>
     <div id="app" aria-live="polite" hidden></div>
     <footer class="foot">SEO checks run against the local storefront files. Google performance data appears only after an authorized connection.</footer>
   </main>
-  <dialog id="editor"><form method="dialog" id="editor-form"><div class="dialog-head"><div><span class="eyebrow">PRODUCT SEO</span><h2 id="editor-title">Edit product</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div><input type="hidden" name="id"><div class="form-grid"><label class="wide">SEO title<input name="title" maxlength="70" required></label><label class="wide">Meta description<textarea name="description" maxlength="180" rows="3" required></textarea></label><label>Focus keyword<input name="keyword" maxlength="90"></label><label>Secondary keywords<input name="secondary" maxlength="180" placeholder="Comma separated"></label><label class="wide">Image alt text<input name="alt" maxlength="160"></label><label class="wide">Canonical URL<input name="canonical" type="url" placeholder="https://kotakurtis.shop/product.html?id=1"></label><label>Indexing<select name="indexing"><option value="index">Index, follow</option><option value="noindex">Noindex</option></select></label></div><div class="snippet"><span class="eyebrow">GOOGLE PREVIEW · DESKTOP</span><strong id="preview-title"></strong><small>https://kotakurtis.shop/product.html?id=<i id="preview-id"></i></small><p id="preview-description"></p></div><div id="validation" class="validation" role="status"></div><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button" id="save-product" value="save">Save local draft</button></div></form></dialog>
+  <dialog id="editor"><form method="dialog" id="editor-form"><div class="dialog-head"><div><span class="eyebrow">PRODUCT SEO</span><h2 id="editor-title">Edit product</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div><input type="hidden" name="id"><div class="form-grid"><label class="wide">SEO title<input name="title" maxlength="70" required></label><label class="wide">Meta description<textarea name="description" maxlength="180" rows="3" required></textarea></label><label>Focus keyword<input name="keyword" maxlength="90"></label><label>Secondary keywords<input name="secondary" maxlength="180" placeholder="Comma separated"></label><label class="wide">Image alt text<input name="alt" maxlength="160"></label><label class="wide">Canonical URL<input name="canonical" type="url" placeholder="https://kotakurtis.shop/product.html?id=1"></label><label>Indexing<select name="indexing"><option value="index">Index, follow</option><option value="noindex">Noindex</option></select></label></div><div class="snippet"><span class="eyebrow">GOOGLE PREVIEW · DESKTOP</span><strong id="preview-title"></strong><small>https://kotakurtis.shop/product.html?id=<i id="preview-id"></i></small><p id="preview-description"></p></div><div id="validate" class="validation" role="status"></div><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button" id="save-product" value="save">Save secure draft</button></div></form></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../../script.js"></script>
-  <script src="supabase-config.js"></script>
-  <script src="seo.js"></script>
+  <script src="supabase-config.js?v=auth2"></script>
+  <script src="seo.js?v=auth2"></script>
 </body>
 </html>
