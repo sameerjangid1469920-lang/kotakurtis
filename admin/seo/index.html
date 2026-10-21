@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SEO Workspace | Kota Kurtis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seo.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="../../index.html">Kota <i>Kurtis</i><small>SEO WORKSPACE</small></a>
+    <nav id="navigation" aria-label="SEO workspace navigation">
+      <button class="nav active" data-view="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav" data-view="products">▤ <span>Product SEO</span></button>
+      <button class="nav" data-view="pages">▧ <span>Page SEO</span></button>
+      <button class="nav" data-view="technical">⌁ <span>Technical SEO</span></button>
+      <button class="nav" data-view="keywords">⌕ <span>Keywords</span></button>
+      <button class="nav" data-view="content">▣ <span>Content</span></button>
+      <button class="nav" data-view="reports">▥ <span>Reports</span></button>
+      <button class="nav" data-view="settings">⚙ <span>Settings & integrations</span></button>
+    </nav>
+    <div class="side-note"><span class="dot"></span> Local development workspace</div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="crumb">KOTA KURTIS <b>/</b> SEO</span><h1 id="heading">SEO overview</h1></div><div class="top-actions"><span class="local-label">LOCAL ONLY</span><a class="store-link" href="../../index.html">View storefront ↗</a></div></header>
+    <div class="notice"><b>Local workspace</b><span>Changes save in this browser only. This static GitHub Pages site has no protected admin server or shared database, so SEO edits here do not publish to storefront pages.</span><a href="#" data-view="settings">Setup notes →</a></div>
+    <div id="app" aria-live="polite"></div>
+    <footer class="foot">SEO checks run against the local storefront files. Google performance data appears only after an authorized connection.</footer>
+  </main>
+  <dialog id="editor"><form method="dialog" id="editor-form"><div class="dialog-head"><div><span class="eyebrow">PRODUCT SEO</span><h2 id="editor-title">Edit product</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div><input type="hidden" name="id"><div class="form-grid"><label class="wide">SEO title<input name="title" maxlength="70" required></label><label class="wide">Meta description<textarea name="description" maxlength="180" rows="3" required></textarea></label><label>Focus keyword<input name="keyword" maxlength="90"></label><label>Secondary keywords<input name="secondary" maxlength="180" placeholder="Comma separated"></label><label class="wide">Image alt text<input name="alt" maxlength="160"></label><label class="wide">Canonical URL<input name="canonical" type="url" placeholder="https://kotakurtis.shop/product.html?id=1"></label><label>Indexing<select name="indexing"><option value="index">Index, follow</option><option value="noindex">Noindex</option></select></label></div><div class="snippet"><span class="eyebrow">GOOGLE PREVIEW · DESKTOP</span><strong id="preview-title"></strong><small>https://kotakurtis.shop/product.html?id=<i id="preview-id"></i></small><p id="preview-description"></p></div><div id="validation" class="validation" role="status"></div><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button" id="save-product" value="save">Save local draft</button></div></form></dialog>
+  <script src="../../script.js"></script>
+  <script src="seo.js"></script>
+</body>
+</html>
